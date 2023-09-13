@@ -1,0 +1,250 @@
+* {
+  font-family: 'REM';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'REM';
+  background-color:#7EBDC2;
+}
+header {
+  background-color:#BB4430;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); 
+  padding: 10px 0;
+}
+
+nav {
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
+}
+
+.todo {
+  font-size: 3vw;
+  font-weight: bold;
+  color: #EFE6DD; ;
+  font-family: GG;
+  
+  
+}
+
+input#searchInput {
+  background-color: #F3DFA2;
+  width: 24vw;
+}
+
+.search input[type="text"] {
+  padding: 8px;
+  border: 1px solid white;
+  border-radius: 4px;
+  width: 220px;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+}
+
+label {
+  font-family: GG;
+  font-size: 1.6vw;
+  margin-right: 5px;
+  font-weight: bold;
+  color: #001F3F;
+  margin-left: 10px;
+  color: #EFE6DD;
+}
+
+select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #fff;
+}
+
+.todo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 337px;
+  height: 259px;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #231F20;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+  border-radius: 8px;
+  border: 1px solid #E0E0E0;
+  color: #fff;
+  
+}
+#sortOrder , #statusFilter , #searchInput{
+  background-color: #2A2B32;
+}
+
+
+#taskInput,
+#taskheadingInput,
+#dueDateInput,
+#categorySelect,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #2A2B32;
+  color: #fff;
+}
+#taskheadingInput::placeholder {
+  color: #999;
+}
+#taskInput::placeholder {
+  color: #999;
+}
+
+
+button {
+  background-color: #BB4430;
+  color: #2A2B32;
+  border: none;
+  margin-top: 5px;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #0056b3;
+}
+.task-card {
+  background-color:#2A2B32; 
+  border: 1px solid #E0E0E0;
+  color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+.task-card:hover {
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-status {
+  display: flex;
+  align-items: center;
+}
+
+.task-status i {
+  margin-right: 5px;
+}
+
+.todo-item.completed {
+  background-color: #e0e0e0;
+  border: 1px solid #ccc;
+}
+
+.grid-container{
+  display:grid;
+  grid-template-rows: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.task-grid {
+  display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 15px;
+
+}
+@media (max-width: 768px) 
+{
+  .todo-container {
+    width: 90%;
+    padding: 15px;
+  }
+}
+@media (max-width: 576px) {
+  .todo-container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  #taskInput,
+  #taskheadingInput,
+  #dueDateInput,
+  #categorySelect,
+  button {
+    padding: 6px;
+    font-size: 10px;
+  }
+}
+
+
+@media (min-width: 577px) and (max-width: 992px) {
+  .todo-container {
+    width: 80%;
+    padding: 15px;
+  }
+
+  #taskInput,
+  #taskheadingInput,
+  #dueDateInput,
+  #categorySelect,
+  button {
+    padding: 8px;
+    font-size: 12px;
+  }
+}
+
+
+@media (min-width: 993px) {
+  .todo-container {
+    width: 50%;
+    padding: 20px;
+  }
+
+}
+
+
+  #taskInput,
+  #taskheadingInput,
+  #dueDateInput,
+  #categorySelect,
+  button {
+    padding: 8px;
+    font-size: 12px;
+  }
+  .task-card.completed {
+    background-color: #E0E0E0; /* Light gray background for completed tasks */
+    border: 1px solid #CCCCCC; /* Lighter gray border */
+  }
+  
+  .task-actions button i {
+    color: #555;
+  }
+    
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}.task-card p {
+  margin: 10px 0;
+}
